@@ -291,7 +291,7 @@ async function consturctServer(moduleDefs) {
  */
 async function serveNcmApi(options) {
   const port = 9000
-  const host = '0.0.0.0'
+  const host = options.host || process.env.HOST || '0.0.0.0'
 
   const checkVersionSubmission =
     options.checkVersion &&
